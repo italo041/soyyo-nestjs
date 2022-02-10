@@ -2,6 +2,6 @@ import { registerAs } from '@nestjs/config';
 
 export default registerAs('config', () => {
   return {
-    API: process.env.API,
+    API_URL: process.env.API_URL,
   };
 });

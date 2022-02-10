@@ -22,7 +22,7 @@ export class EntitiesService {
   ];
 
   filter(payload: FilterEntityDto) {
-    console.log(this.configService.API);
+    console.log(this.configService.API_URL);
 
     return this.entities;
   }

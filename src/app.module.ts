@@ -1,4 +1,6 @@
 import { Module } from '@nestjs/common';
+import * as Joi from 'joi';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EntitiesModule } from './entities/entities.module';
@@ -10,6 +12,9 @@ import config from './config';
       envFilePath: '.env',
       isGlobal: true,
       load: [config],
+      validationSchema: Joi.object({
+        API_URL: Joi.string().required(),
+      }),
     }),
     EntitiesModule,
   ],
