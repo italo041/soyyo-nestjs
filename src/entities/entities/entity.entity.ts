@@ -11,7 +11,9 @@ export class Entity {
   @ApiProperty()
   contactName: string;
   @ApiProperty()
-  contactEmail: string;
+  contactMail: string;
   @ApiProperty()
   logo: string;
+  @ApiProperty()
+  ipAddress: string;
 }
